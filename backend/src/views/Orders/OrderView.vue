@@ -41,15 +41,15 @@
         <tbody>
         <tr>
           <td class="font-bold py-1 px-2">Full Name</td>
-          <td>{{ order.customer.first_name }} {{ order.customer.last_name }}</td>
+          <td>{{ order.details.name }}</td>
         </tr>
         <tr>
           <td class="font-bold py-1 px-2">Email</td>
-          <td>{{ order.customer.email }}</td>
+          <td>{{ order.details.phone }}</td>
         </tr>
         <tr>
           <td class="font-bold py-1 px-2">Phone</td>
-          <td>{{ order.customer.phone }}</td>
+          <td>{{ order.details.address }}</td>
         </tr>
         </tbody>
       </table>
@@ -59,22 +59,10 @@
     <!--  Addresses Details-->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
       <div>
-        <h2 class="text-xl font-semibold mt-6 pb-2 border-b border-gray-300">Billing Address</h2>
-        <!--  Billing Address Details-->
-        <div>
-          {{ order.customer.billingAddress.address1 }}, {{ order.customer.billingAddress.address2 }} <br>
-          {{ order.customer.billingAddress.city }}, {{ order.customer.billingAddress.zipcode }} <br>
-          {{ order.customer.billingAddress.state }}, {{ order.customer.billingAddress.country }} <br>
-        </div>
-        <!--/  Billing Address Details-->
-      </div>
-      <div>
         <h2 class="text-xl font-semibold mt-6 pb-2 border-b border-gray-300">Shipping Address</h2>
         <!--  Shipping Address Details-->
         <div>
-          {{ order.customer.shippingAddress.address1 }}, {{ order.customer.shippingAddress.address2 }} <br>
-          {{ order.customer.shippingAddress.city }}, {{ order.customer.shippingAddress.zipcode }} <br>
-          {{ order.customer.shippingAddress.state }}, {{ order.customer.shippingAddress.country }} <br>
+          {{ order.details.address }}<br>
         </div>
         <!--/  Shipping Address Details-->
       </div>
